@@ -1,7 +1,7 @@
 version: '3'
 services:
   ansible-node1:
-    image: raspberrydeveloper/ansible-node
+    image: steveiliop56/ansible-node
     name: ansible-node1
     hostname: ansible-node1.local
     networks:
@@ -11,7 +11,7 @@ services:
       - "8081:80"
 
   ansible-node2:
-    image: raspberrydeveloper/ansible-node
+    image: steveiliop56/ansible-node
     name: ansible-node2
     hostname: ansible-node2.local
     networks:
@@ -21,7 +21,7 @@ services:
       - "8082:80"
 
   ansible-host:
-    image: raspberrydeveloper/ansible-host
+    image: steveiliop56/ansible-host
     name: ansible-host
     hostname: ansible-host
     tty: true
