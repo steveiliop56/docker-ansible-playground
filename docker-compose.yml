@@ -1,27 +1,27 @@
 version: '3.1'
 services:
   ansible-node1:
-    image: steveiliop56/ansible-node
+    image: local/ansible-node
     container_name: ansible-node1
     hostname: ansible-node1
     networks:
       ansible-default:
         ipv4_address: 10.0.0.2
     ports: 
-      - "8081:80"
+      - "8881:80"
 
   ansible-node2:
-    image: steveiliop56/ansible-node
+    image: local/ansible-node
     container_name: ansible-node2
     hostname: ansible-node2
     networks:
       ansible-default:
         ipv4_address: 10.0.0.3
     ports: 
-      - "8082:80"
+      - "8882:80"
 
   ansible-host:
-    image: steveiliop56/ansible-host
+    image: local/ansible-host
     container_name: ansible-host
     hostname: ansible-host
     tty: true
