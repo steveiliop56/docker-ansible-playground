@@ -31,7 +31,7 @@ Then it will ask you for passphrase just press enter as it is not needed.
 - 2. Secondly you will need to build the node image with this command:
 
 ```Shellscript
-sudo docker build -t raspberrydeveloper/ansible-node Dockerfile-node
+sudo docker build -t steveiliop56/ansible-node Dockerfile-node
 ```
 
 If your computer is fast it will take a minute or so.
@@ -39,7 +39,7 @@ If your computer is fast it will take a minute or so.
 - 3. Thirdly you will need to build the host image with this command:
 
 ```Shellscript
-sudo docker build -t raspberrydeveloper/ansible-host
+sudo docker build -t steveiliop56/ansible-host
 ```
 
 This will take even less time.
