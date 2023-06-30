@@ -25,7 +25,7 @@ RUN ln -sf /usr/share/zoneinfo/Europe/Athens /etc/localtime
 RUN mkdir /var/run/sshdRUN 
 RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
 
-RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_configRUN 
+RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 RUN mkdir /root/.ssh
 COPY id_rsa.pub /root/.ssh/authorized_keys
 
