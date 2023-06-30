@@ -1,24 +1,17 @@
 FROM ubuntu:latest
 
 RUN apt-get update && \
-    apt-get install -y openssh-server net-tools curl wget && \
+    apt-get install -y openssh-server&& \
     apt-get clean all
 
 # python and relevant tools
 RUN apt-get update && apt-get install -y \
     python3 \
     python3-dev \
-    libxml2-dev \
-    libxslt-dev \
     libssl-dev \
-    zlib1g-dev \
-    libyaml-dev \
-    libffi-dev \
-    python3-pip # Latest versions of python tools via pip
+    python3-pip
 
-RUN pip3 install --upgrade pip \
-    virtualenv \
-    requests
+RUN pip3 install --upgrade pip setuptools
 
 # Replace with your own timezone after zoneinfo/. Example: Europe/Athens
 RUN ln -sf /usr/share/zoneinfo/Europe/Athens /etc/localtime
